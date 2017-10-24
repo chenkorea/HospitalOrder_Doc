@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:androidbootstrap="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/com.boil.hospitalorder.hospitaldoctor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divider_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/normal_title_view" />
+  
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <!--
+        <ScrollView
+            android:id="@+id/scroll_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_below="@+id/ll_filter"
+            android:scrollbars="none" >
+
+            <com.boil.utils.CTGridView
+                android:id="@+id/gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/griditems_bg"
+                android:horizontalSpacing="5.0dip"
+                android:listSelector="@null"
+                android:numColumns="2"
+                android:padding="4dp"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="5dp" />
+            
+            
+        </ScrollView> -->
+
+        
+
+        <com.handmark.pulltorefresh.library.PullToRefreshGridView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_below="@+id/ll_filter"
+            android:background="@color/griditems_bg"
+            android:choiceMode="singleChoice"
+                 android:padding="4dp"
+                android:scrollbars="none"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:horizontalSpacing="5.0dip"
+            android:listSelector="@null"
+            android:numColumns="2"
+            android:scrollbarStyle="outsideOverlay"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"
+            ptr:ptrAnimationStyle="rotate"
+            ptr:ptrDrawableBottom="@drawable/loading_2_1"
+            ptr:ptrMode="both" />
+	<include
+            android:layout_above="@+id/ll_bottom"
+            android:layout_below="@+id/ll_filter"
+            layout="@layout/loading_view_952658"
+            android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/listview_divider"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btn_bespoke_net"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="0.8"
+                android:text="总价¥0"
+                android:textSize="16sp"
+                app:bb_text_gravity="center"
+                bootstrapbutton:bb_roundedCorners="true"
+                bootstrapbutton:bb_size="small"
+                bootstrapbutton:bb_type="success" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/get_captcha_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.2"
+                android:text="订餐车(0)"
+                android:textSize="16sp"
+                app:bb_text_gravity="center"
+                bootstrapbutton:bb_roundedCorners="true"
+                bootstrapbutton:bb_size="small"
+                bootstrapbutton:bb_type="warning" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_order_trans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#50000000"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_filter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_food_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_d"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="菜类" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/listview_divider" />
+
+            <TextView
+                android:id="@+id/tv_taste"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_d"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="口味" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/listview_divider" />
+
+            <TextView
+                android:id="@+id/tv_food_order"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_d"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="默认排序" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sub_filter"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/ll_filter" >
+
+            <ListView
+                android:id="@+id/list_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/listview_divider_bg"
+                android:dividerHeight="1dp" >
+            </ListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/dialog_view" 
+	android:orientation="vertical"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+	android:minHeight="60dp"
+	android:minWidth="180dp"
+	android:padding="10dp"
+	android:background="@drawable/background_n"> 
+	<!-- 修改提示狂主题 --> 
+	<ImageView 
+		android:id="@+id/img"
+		android:layout_width="70dp" 
+		android:layout_height="70dp" 
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingTop="10dp"
+		android:src="@drawable/a5"
+		/>
+	
+	<RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:layout_marginTop="-13dp"
+	    >
+	    
+	    <ImageView 
+	    android:layout_width="match_parent"
+	    android:layout_height="2dp"
+	    android:background="@color/litlegray"/>
+	    
+	    <ImageView
+	        android:id="@+id/wt"
+	        android:layout_width="match_parent"
+	        android:layout_height="2dp"
+	        android:background="@color/theme_color_1" />
+	    
+	</RelativeLayout>
+	
+	
+	<TextView 
+	    android:id="@+id/tipTextView"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dp"
+		android:layout_gravity="center_horizontal"
+		android:textColor="@color/theme_color"
+		android:visibility="gone"
+		android:text="数据加载中……" />
+</LinearLayout>

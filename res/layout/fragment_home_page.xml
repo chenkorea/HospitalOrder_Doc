@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divider_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.boil.hospitalorder.utils.BannerView
+                android:id="@+id/viewBanner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/white" >
+            </com.boil.hospitalorder.utils.BannerView>
+
+            <RelativeLayout
+                android:id="@+id/sty_lay"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/viewBanner"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <ImageView
+                    android:id="@+id/center_line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@color/listview_divider" />
+
+                <ImageView
+                    android:id="@+id/right_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/center_line"
+                    android:background="@color/listview_divider" />
+
+                <com.boil.hospitalorder.utils.RevealLayout
+                    android:id="@+id/ll_hos_cooperation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/center_line"
+                    android:gravity="center" >
+
+                    <RelativeLayout
+                        android:id="@+id/rel_hos_cooperation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/lay_hos_cooperation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true" >
+
+                            <TextView
+                                android:id="@+id/iv_hosipital_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fa_hospital_o"
+                                android:textColor="#76EEC6"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/text_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.8"
+                                android:text="合作医院" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/te_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lay_hos_cooperation"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="更多优质医院资源整合"
+                                android:textColor="@color/gray"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.boil.hospitalorder.utils.RevealLayout>
+
+                <com.boil.hospitalorder.utils.RevealLayout
+                    android:id="@+id/ll_order_internet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/right_line"
+                    android:layout_toRightOf="@+id/center_line"
+                    android:gravity="center" >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/lay_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true" >
+
+                            <TextView
+                                android:id="@+id/iv_order_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fa_clock_o"
+                                android:textColor="@color/wait_call_text_color"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/text_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.8"
+                                android:text="网上预约" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/te_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lay_order"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="挂号检查	一步到位"
+                                android:textColor="@color/gray"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.boil.hospitalorder.utils.RevealLayout>
+
+                <com.boil.hospitalorder.utils.RevealLayout
+                    android:id="@+id/ll_special_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/right_line"
+                    android:layout_toRightOf="@+id/center_line"
+                    android:gravity="center" >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/lay_special_doc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true" >
+
+                            <TextView
+                                android:id="@+id/iv_special_doc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fa_users"
+                                android:textColor="#C1FFC1"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/text_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.8"
+                                android:text="专家名医" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/te_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lay_special_doc"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="特邀专家	放心看病"
+                                android:textColor="@color/gray"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.boil.hospitalorder.utils.RevealLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_middle"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/sty_lay"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.boil.hospitalorder.utils.RevealLayout
+                    android:id="@+id/ll_queuing"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/lay_queuing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true" >
+
+                            <TextView
+                                android:id="@+id/iv_queuing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fa_list_ol"
+                                android:textColor="@color/wait_call_color"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/text_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.8"
+                                android:text="排队叫号" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lay_queuing"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="当前是第23号患者就诊"
+                                android:textColor="@color/gray"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.boil.hospitalorder.utils.RevealLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/listview_divider" />
+
+                <com.boil.hospitalorder.utils.RevealLayout
+                    android:id="@+id/ll_query_file"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1" >
+
+                    <RelativeLayout
+                        android:id="@+id/btn_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/lay_query_file"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true" >
+
+                            <TextView
+                                android:id="@+id/iv_query_file"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fa_file_text_o"
+                                android:textColor="#66CDAA"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/text_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.8"
+                                android:text="报告单查询" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lay_query_file"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="检查报告已出请查看"
+                                android:textColor="@color/gray"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.boil.hospitalorder.utils.RevealLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/lay_middle"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:paddingBottom="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/lay_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <com.boil.hospitalorder.utils.RevealLayout
+                        android:id="@+id/ll_myfee"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/lay_myfee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" >
+
+                            <TextView
+                                android:id="@+id/iv_myfee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fa_money"
+                                android:textColor="#00EE00"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/text_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.8"
+                                android:text="我的费用" />
+                        </LinearLayout>
+                    </com.boil.hospitalorder.utils.RevealLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/listview_divider" />
+
+                    <com.boil.hospitalorder.utils.RevealLayout
+                        android:id="@+id/ll_all_server"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" 
+                         android:gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/lay_all_server"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:id="@+id/iv_all_server"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fa_th"
+                                android:textColor="#66CDAA"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/text_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:alpha="0.8"
+                                android:text="综合服务" />
+                        </LinearLayout>
+                    </com.boil.hospitalorder.utils.RevealLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/listview_divider_bg" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/top"
+        android:background="@color/white"
+        android:divider="@color/listview_divider"
+        android:dividerHeight="0.5dp"
+        android:visibility="gone" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divide_big"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/normal_title_ct" />
+
+    <include
+        layout="@layout/loading_view_952658"
+        android:visibility="gone" />
+
+	<View 
+	    android:id="@+id/v_order_trans"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone"
+	    android:background="#50000000"
+	    />
+	
+    <ListView
+        android:id="@+id/lv_income"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/listview_divide_big"
+        android:background="@color/listview_divide_big"
+        android:headerDividersEnabled="true" 
+        android:scrollbars="none"
+        android:layout_margin="7dp"
+        android:listSelector="#00000000"
+        android:cacheColorHint="@null"
+        android:dividerHeight="10dp"
+        />
+    
+</LinearLayout>

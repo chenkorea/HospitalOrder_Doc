@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divide_big"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/normal_title_view" />
+
+    <RelativeLayout
+        android:id="@+id/rel_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/announce_item_selector"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="6dp"
+            android:alpha="0.8"
+            android:gravity="left|center_vertical"
+            android:tag="1"
+            android:text="我的话题"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_global_arrow_right" />
+
+        <TextView
+            android:id="@+id/tv_topic_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv1"
+            android:alpha="0.8"
+            android:paddingRight="5dp"
+            android:text="0个话题"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.boil.hospitalsecond.tool.ptrtool.PtrClassicFrameLayout
+        xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rotate_header_list_view_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rel_choose"
+        android:background="@color/cube_mints_f1f1f1"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7" >
+
+        <com.boil.hospitalsecond.tool.ptrtool.CTListView
+            android:id="@+id/listview2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:divider="@color/listview_divider"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:scrollbarStyle="outsideOverlay" />
+    </com.boil.hospitalsecond.tool.ptrtool.PtrClassicFrameLayout>
+
+    <!--
+         <ListView
+        android:id="@+id/listview2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rel_choose"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/listview_divide_big"
+        android:layout_marginTop="3dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:scrollbars="none" />
+    -->
+
+    <include layout="@layout/loading_view_952658" />
+
+    <ImageButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:background="@null"
+        android:src="@drawable/a_o"
+        android:visibility="gone" />
+
+</RelativeLayout>

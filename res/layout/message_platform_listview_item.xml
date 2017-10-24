@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:background="@color/listview_divide_big"
+     android:padding="4dp"
+    android:orientation="vertical" >
+    <LinearLayout
+       	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:background="#fcfcfc"
+    	android:padding="6dp"
+    	android:orientation="vertical"
+    	>
+ 
+    <TextView 
+        android:id="@+id/tv_message_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="怀孕三个月了应该注意什么?"
+        />
+    
+    
+    <TextView 
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+       android:paddingTop="6dp"
+        android:textSize="14sp"
+        android:maxLines="3"
+           android:lineSpacingMultiplier="1.2"
+        android:textScaleX="1.0"
+        android:typeface="monospace"
+        android:ellipsize="end"
+         android:alpha="0.8"
+        />
+   
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="8dp"
+        >
+        
+        <TextView
+            android:id="@+id/tv_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张燕"
+            android:layout_alignParentLeft="true"
+            android:alpha="0.8"
+           android:textSize="12sp"
+            />
+        
+        
+             <TextView
+         	android:id="@+id/tv_time"
+    		android:layout_toRightOf="@+id/tv_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+              android:textColor="@color/actionsheet_gray"
+              android:typeface="serif"
+              android:textSize="12sp"
+    	    android:alpha="0.8"
+    	    android:layout_alignBaseline="@+id/tv_last_name"
+            />
+           <TextView
+         	android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:alpha="0.6"
+            />
+           
+                 <TextView
+         	android:id="@+id/iv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_count"
+            android:text="@string/fa_commenting"
+            android:textSize="16sp"
+            android:paddingRight="5dp"
+            android:alpha="0.6"
+            />
+    </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

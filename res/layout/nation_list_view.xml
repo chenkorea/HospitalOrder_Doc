@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="请选择民族"
+        android:textColor="@color/bbutton_success"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/listview_divider"
+        android:contentDescription="@string/cont_descr" />
+
+    <ListView
+        android:id="@+id/lv_nation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/listview_divider"
+        android:dividerHeight="0.5dp" />
+
+</LinearLayout>

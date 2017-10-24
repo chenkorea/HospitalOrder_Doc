@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/announce_item_selector"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <com.boil.utils.RevealLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <com.boil.utils.CLRoundImageView
+            android:id="@+id/img_pic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/head_default_yixin" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/doctor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:paddingLeft="15dp"
+                    android:text="陈小李"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/text_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/doctor_name"
+                    android:alpha="0.7"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="心血管科"
+                    android:layout_alignBottom="@+id/doctor_name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/doctor_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/doctor_name"
+                    android:alpha="0.6"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/doctor_expert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/doctor_profile"
+                    android:alpha="0.6"
+                     android:paddingTop="3dp"
+                    android:paddingLeft="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </com.boil.utils.RevealLayout>
+    
+
+      <!--   <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_yizhen_green"
+            android:gravity="center"
+            android:layout_weight="0.2"
+            android:text="有号"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" /> -->
+</LinearLayout>

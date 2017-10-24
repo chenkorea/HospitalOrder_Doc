@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/announce_item_selector"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:padding="5dp" >
+
+    <com.boil.hospitalorder.utils.CLRoundImageView
+        android:id="@+id/head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:src="@drawable/head_default_yixin" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/head"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="7dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_agree_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/iv_agree"
+        android:layout_alignParentRight="true"
+        android:alpha="0.6" />
+
+    <TextView
+        android:id="@+id/iv_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_agree_count"
+        android:alpha="0.8"
+        android:padding="7dp"
+        android:text="@string/fa_thumbs_o_up"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/head"
+        android:layout_below="@+id/user_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/head"
+        android:alpha="0.6"
+        android:gravity="bottom"
+        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/iv_agree"
+        android:text="@string/delete"
+        android:textColor="@color/red"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_back_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_below="@+id/head"
+        android:layout_marginRight="5dp"
+        android:alpha="0.8"
+        android:gravity="left"
+        android:paddingLeft="15dp"
+        android:textSize="14sp" />
+
+</RelativeLayout>

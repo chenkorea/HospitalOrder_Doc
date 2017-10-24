@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_order_detail_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/img_check" />
+
+    <TextView
+        android:id="@+id/tv_order_detail_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_order_detail_img"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxEms="13"
+        android:text="宫爆鸡丁　很不错宫爆鸡丁" />
+
+    <TextView
+        android:id="@+id/tv_order_detail_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_order_detail_img"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iv_order_detail_img"
+        android:text="￥7"
+        android:textColor="@color/red_material_ptr"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_order_detail_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_order_detail_img"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:text="共1份">
+    </TextView>
+    <TextView
+        android:id="@+id/tv_order_detail_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/iv_order_detail_img"
+        android:alpha="0.8"/>
+    
+
+</RelativeLayout>

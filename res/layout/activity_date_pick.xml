@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:androidbootstrap="http://schemas.android.com/apk/res-auto"
+    xmlns:app1="http://schemas.android.com/apk/res/com.boil.hospitalorder.hospitaldoctor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+		<View 
+		    android:id="@+id/repair_date_other"
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:background="@color/listview_divide_big" >
+
+             <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/repair_date_sel_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定"
+                app1:bb_text_gravity="center"
+                bootstrapbutton:bb_roundedCorners="true"
+                android:layout_alignParentRight="true"
+                bootstrapbutton:bb_size="small"
+                bootstrapbutton:bb_type="success" />
+           <!--  <Button
+                android:id="@+id/repair_date_sel_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@color/transparent"
+                android:text="取消"
+                android:textColor="@color/blue"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/repair_date_sel_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/transparent"
+                android:textColor="@color/blue"
+                android:text="确定"
+                android:textSize="20sp" /> -->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+             >
+                <DatePicker
+                    android:id="@+id/date_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                     >
+                </DatePicker>
+
+                <TimePicker
+                    android:id="@+id/time_picker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:visibility="visible"
+                     />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/patient_round_selector"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+  
+  
+    <TextView 
+        android:id="@+id/tv"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="5"
+        android:textSize="12sp"
+        android:textColor="#000"
+        android:alpha="0.6"
+        />
+    
+  <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_weight="0"
+        android:background="@color/listview_divider"
+        />
+    
+      <TextView 
+        android:id="@+id/tv2"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+         android:paddingLeft="3dp"
+        android:paddingRight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#000"
+        android:alpha="0.6"
+        android:text="adafaf"
+        />
+    
+</LinearLayout>

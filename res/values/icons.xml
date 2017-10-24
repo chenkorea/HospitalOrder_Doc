@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="fa_balance_scale">&#xf24e;</string>
+   <string name="fa_bicycle">&#xf206;</string>
+   <string name="fa_camera">&#xf030;</string>
+   
+   <string name="fa_home">&#xf015;</string>
+   <string name="fa_jsfiddle">&#xf1cc;</string>
+   <string name="fa_heart_o">&#xf08a;</string>
+   <string name="fa_heart">&#xf004;</string>
+   <string name="fa_user">&#xf007;</string>
+   
+   <string name="fa_hospital_o">&#xf0f8;</string>
+   <string name="fa_clock_o">&#xf017;</string>
+   <string name="fa_user_plus">&#xf234;</string>
+   <string name="fa_list_ol">&#xf0cb;</string>
+   <string name="fa_file_text_o">&#xf0f6;</string>
+   <string name="fa_money">&#xf0d6;</string>
+   
+    <string name="fa_users">&#xf0c0;</string>
+    <string name="fa_th">&#xf00a;</string>
+    
+    <string name="fa_user_md">&#xf0f0;</string>
+    <string name="fa_wechat">&#xf1d7;</string>
+    <string name="fa_edit">&#xf044;</string>
+    
+    <string name="fa_angle_right">&#xf105;</string>
+    <string name="fa_angle_down">&#xf107;</string>
+    <string name="fa_angle_left ">&#xf104;</string>
+    <string name="fa_angle_up">&#xf106;</string>
+    
+    
+    <string name="fa_map_marker">&#xf041;</string>
+    
+    <string name="fa_envelope">&#xf0e0;</string>
+    
+    <string name="fa_coffee">&#xf0f4;</string>
+    <string name="fa_connectdevelop">&#xf20e;</string>
+    <string name="fa_bank">&#xf19c;</string>
+    <string name="fa_tags">&#xf02c;</string>
+     
+    <string name="fa_commenting">&#xf27a;</string>
+    <string name="fa_comment">&#xf075;</string>
+	<string name="fa_plus_circle">&#xf055;</string>
+	<string name="al_add_circle">&#xe602;</string>
+    <string name="fa_add_small">&#xe604;</string>
+    
+    <string name="fa_bars">&#xf0c9;</string>
+    
+    <string name="fa_service">&#xe611;</string>
+    <string name="fa_test">&#xe612;</string>
+    <string name="fa_pay">&#xe613;</string>
+    <string name="fa_setting">&#xe60e;</string>
+    <string name="fa_personal">&#xe614;</string>
+    <string name="fa_notice">&#xe60f;</string>
+    <string name="fa_password">&#xe610;</string>
+    <string name="fa_case">&#xe60b;</string>
+    <string name="fa_hand">&#xe615;</string>
+    <string name="fa_resource">&#xe616;</string>
+    <string name="fa_book">&#xe608;</string>
+    
+    <string name="fa_manager">&#xe60a;</string>
+    <string name="fa_danger">&#xe60d;</string>
+    <string name="fa_wish_focus">&#xe607;</string>
+    
+    <string name="fa_voice">&#xe606;</string>
+    <string name="fa_chat">&#xe605;</string>
+    
+    <string name="fa_home2">&#xe617;</string>
+    <string name="fa_user2">&#xe61a;</string>
+    <string name="fa_chat2">&#xe619;</string>
+    <string name="fa_thumbs_o_up">&#xf087;</string>
+    <string name="fa_trash">&#xf1f8;</string>
+    <string name="fa_thumbs_up">&#xf164;</string>
+    
+    <string name="icon_yiliaozhanghu">&#xe639;</string>
+    <string name="icon_yiliaomedical51">&#xe65d;</string>
+    <string name="icon_zhenliaojilu">&#xe652;</string>
+    <string name="icon_zhenliaojilu1">&#xe640;</string>
+    <string name="icon_yiliaomedical60">&#xe61d;</string>
+    <string name="icon_hualiao">&#xe61f;</string>
+    <string name="icon_book">&#xe608;</string>
+    <string name="icon_danger">&#xe60d;</string>
+    <string name="icon_personal">&#xe614;</string>
+    <string name="icon_manager">&#xe60a;</string>
+   	<string name="fa_back">&#xe633;</string>
+	<string name="fa_circle">&#xe63f;</string>
+	<string name="fa_default2">&#xe631;</string>
+	<string name="fa_operat">&#xe70e;</string>
+	<string name="fa_operat2">&#xe636;</string>
+	<string name="fa_right">&#xe637;</string>
+	
+</resources>

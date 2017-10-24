@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_choose"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@color/listview_divide_big"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/normal_title_ct" />
+
+    <include
+        layout="@layout/loading_view_952658"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:listSelector="#00000000"
+        android:cacheColorHint="@null"
+        android:background="@drawable/tag_listview_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_dignose_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:alpha="0.8"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            
+            
+        </LinearLayout>
+
+        <View
+             android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/listview_divide_big"
+            />
+        <ListView
+            android:id="@+id/lv_income"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:divider="@color/listview_divide_big"
+            android:headerDividersEnabled="true"
+            android:dividerHeight="0.5dp"
+            android:footerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</LinearLayout>

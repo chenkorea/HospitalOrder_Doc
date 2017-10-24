@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_choose"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingBottom="12dp"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_child_doc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_child_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_child_doc"
+        android:alpha="0.6"
+        android:paddingTop="8dp"
+        android:gravity="start"
+        android:textColor="@color/black"
+        />
+
+    <RelativeLayout
+        android:layout_width="190dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tv_child_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/bg_text_green"
+        android:gravity="center"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_doc_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sdfsfsdfsdf"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_doc_name"
+            android:layout_marginTop="5dp"
+            android:text="sdfsfsdfsdf"
+            android:textColor="@color/white"
+             />
+    </RelativeLayout>
+
+    <com.boil.hospitalorder.utils.CLRoundImageView
+        android:id="@+id/doc_head"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tv_child_content"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/head_default_yixin" />
+
+</RelativeLayout>

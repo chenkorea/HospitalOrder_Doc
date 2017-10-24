@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/announce_item_selector"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/tv_suggest_item"
+        android:layout_width="0.0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:text="心电室" />
+
+    <LinearLayout
+        android:layout_width="0.0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right" />
+    </LinearLayout>
+
+</LinearLayout>

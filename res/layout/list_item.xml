@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boil.hospitalorder.utils.RevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_center2"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="1.0"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:text="仅看有货"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+    
+    
+    
+   <!-- style="@style/FilterToggleButton" -->
+    <!-- <ToggleButton
+        android:id="@+id/tgbtn_filter_read_left_only"
+      /> -->
+     <ImageView
+         android:id="@+id/img_indicate"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+         android:gravity="center_vertical"
+        android:paddingRight="20dp"
+        
+         />
+
+</com.boil.hospitalorder.utils.RevealLayout>

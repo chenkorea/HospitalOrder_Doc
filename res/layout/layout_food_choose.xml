@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:androidbootstrap="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/com.boil.hospitalorder.hospitaldoctor"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <ImageView
+                    android:id="@+id/iv_cart_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/img_check" />
+
+                <TextView
+                    android:id="@+id/tv_cart_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_cart_img"
+                    android:ellipsize="end"
+                    android:maxEms="13"
+                    android:textColor="@color/gray2"
+                    android:singleLine="true"
+                    android:text="宫爆鸡丁" />
+
+                <TextView
+                    android:id="@+id/tv_cart_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/iv_cart_img"
+                    android:layout_toRightOf="@+id/iv_cart_img"
+                    android:text="￥7"
+                    android:textColor="@color/red_material_ptr"
+                    android:textSize="16sp" />
+
+                <com.boil.hospitalorder.hospitaldoctor.my.spar.AmountView
+                    android:id="@+id/amountView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignBottom="@+id/iv_cart_img"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/tv_cart_price"
+                    android:gravity="right"
+                    app:btnTextSize="14sp"
+                    app:btnWidth="36dp"
+                    app:tvWidth="40dp" >
+                </com.boil.hospitalorder.hospitaldoctor.my.spar.AmountView>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="简介:"
+                android:textColor="@color/gray2"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:alpha="0.8"
+                android:text="简介简介简介简介简介简介简介"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:minHeight="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_edittext"
+                android:hint="请输入订单备注"
+                android:textSize="14sp" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btn_sure"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="确定"
+                android:textSize="16sp"
+                app:bb_text_gravity="center"
+                bootstrapbutton:bb_roundedCorners="true"
+                bootstrapbutton:bb_size="small"
+                bootstrapbutton:bb_type="success" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

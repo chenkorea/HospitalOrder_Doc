@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_white"
+    android:alpha="0.8"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40.5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#850" />
+
+            <com.boil.utils.CHScrollView
+                android:id="@+id/item_scroll_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3" >
+
+                    <LinearLayout
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_1"
+                            android:layout_width="53dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1/29"
+                            android:textColor="#850" />
+
+                        <TextView
+                            android:id="@+id/tv_v_1"
+                            android:layout_width="53dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="周五"
+                            android:textColor="#850" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_2"
+                            android:layout_width="53dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1/30"
+                            android:textColor="#850" />
+
+                        <TextView
+                            android:id="@+id/tv_v_2"
+                            android:layout_width="53dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="周六"
+                            android:textColor="#850" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_3"
+                            android:layout_width="53dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1/31"
+                            android:textColor="#850" />
+
+                        <TextView
+                            android:id="@+id/tv_v_3"
+                            android:layout_width="53dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="周日"
+                            android:textColor="#850" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_4"
+                            android:layout_width="53dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="2/1"
+                            android:textColor="#850" />
+
+                        <TextView
+                            android:id="@+id/tv_v_4"
+                            android:layout_width="53dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="周一"
+                            android:textColor="#850" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_5"
+                            android:layout_width="53dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="2/2"
+                            android:textColor="#850" />
+
+                        <TextView
+                            android:id="@+id/tv_v_5"
+                            android:layout_width="53dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="周二"
+                            android:textColor="#850" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_6"
+                            android:layout_width="53dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="2/3"
+                            android:textColor="#850" />
+
+                        <TextView
+                            android:id="@+id/tv_v_6"
+                            android:layout_width="53dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="周三"
+                            android:textColor="#850" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="53dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_7"
+                            android:layout_width="53dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="2/4"
+                            android:textColor="#850" />
+
+                        <TextView
+                            android:id="@+id/tv_v_7"
+                            android:layout_width="53dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="周四"
+                            android:textColor="#850" />
+                    </LinearLayout>
+
+
+                    
+                </LinearLayout>
+            </com.boil.utils.CHScrollView>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/litlegray" />
+
+        <com.boil.utils.MyListView
+            android:id="@+id/hlistview_scroll_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+        </com.boil.utils.MyListView>
+    </LinearLayout>
+
+</LinearLayout>

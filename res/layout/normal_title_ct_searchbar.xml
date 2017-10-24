@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dip"
+    android:background="@color/theme_color_1"
+    android:gravity="center"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="54dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/head_title_wrapper_background"
+        android:clickable="true"
+        android:contentDescription="@string/cont_descr"
+        android:scaleType="centerInside"
+        android:src="@drawable/head_back" />
+    
+    <com.boil.hospitalsecond.tool.ctedittext.IconCenterEditText
+        android:id="@+id/search_edittext"
+        style="@style/editTextStyle"
+        android:layout_width="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="搜索"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+       />
+
+</LinearLayout>

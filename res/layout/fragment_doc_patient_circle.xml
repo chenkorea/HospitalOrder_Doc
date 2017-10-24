@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pull="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/web_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divider_bg"
+    android:orientation="vertical" >
+
+        <RelativeLayout
+             android:id="@+id/sty_lay"
+             android:layout_width="match_parent"
+             android:layout_height="130dp"
+             android:layout_marginTop="20dp"
+             android:background="@color/white" >
+
+             <ImageView
+                 android:id="@+id/center_line"
+                 android:layout_width="0.5dp"
+                 android:layout_height="match_parent"
+                 android:layout_centerInParent="true"
+                 android:background="@color/listview_divider" />
+
+             <ImageView
+                 android:id="@+id/right_line"
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:layout_centerVertical="true"
+                 android:layout_toRightOf="@+id/center_line"
+                 android:background="@color/listview_divider" />
+
+                 <RelativeLayout
+                     android:id="@+id/rel_consult"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:background="@drawable/btn_list_item_bg"
+                       android:layout_toLeftOf="@+id/center_line"
+                     android:gravity="center"
+                     android:orientation="vertical" >
+
+                     <LinearLayout
+                         android:id="@+id/lay_consult"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true" >
+
+                         <TextView
+                             android:id="@+id/iv_consult_icon"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/fa_chat"
+                             android:textColor="@color/orange"
+                             android:textSize="18sp" />
+
+                         <TextView
+                             android:id="@+id/text_1"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="5dp"
+                             android:alpha="0.8"
+                             android:text="咨询" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/te_2"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/lay_consult"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="5dp"
+                         android:gravity="center"
+                         android:orientation="vertical" >
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="查看所有咨询我的信息"
+                             android:textColor="@color/gray"
+                             android:textSize="11sp" />
+                     </LinearLayout>
+                 </RelativeLayout>
+
+
+                 <RelativeLayout
+                     android:id="@+id/rel_message"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                         android:layout_toRightOf="@+id/center_line"
+                          android:layout_above="@+id/right_line"
+                          android:background="@drawable/btn_list_item_bg"
+                     android:gravity="center"
+                     android:orientation="vertical" >
+
+                     <LinearLayout
+                         android:id="@+id/lay_message"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true" >
+
+                         <TextView
+                             android:id="@+id/iv_message_icon"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/fa_voice"
+                             android:textColor="#56abe4"
+                             android:textSize="20sp" />
+
+                         <TextView
+                             android:id="@+id/text_2"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="5dp"
+                             android:alpha="0.8"
+                             android:text="留言" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/te_3"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/lay_message"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="5dp"
+                         android:gravity="center"
+                         android:orientation="vertical" >
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="查看留言信息"
+                             android:textColor="@color/gray"
+                             android:textSize="11sp" />
+                     </LinearLayout>
+                 </RelativeLayout>
+
+                 <RelativeLayout
+                     android:id="@+id/rel_focus"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:gravity="center"
+                         android:layout_below="@+id/right_line"
+                 android:layout_toRightOf="@+id/center_line"
+                 android:background="@drawable/btn_list_item_bg"
+                     android:orientation="vertical" >
+
+                     <LinearLayout
+                         android:id="@+id/lay_focus"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_centerHorizontal="true" >
+
+                         <TextView
+                             android:id="@+id/iv_focus"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="@string/fa_wish_focus"
+                             android:textColor="@color/wait_call_text_color"
+                             android:textSize="16sp" />
+
+                         <TextView
+                             android:id="@+id/text_3"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="5dp"
+                             android:alpha="0.8"
+                             android:text="关注" />
+                     </LinearLayout>
+
+                     <LinearLayout
+                         android:id="@+id/te_4"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/lay_focus"
+                         android:layout_centerHorizontal="true"
+                         android:layout_marginTop="5dp"
+                         android:gravity="center"
+                         android:orientation="vertical" >
+
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:text="查看关注信息"
+                             android:textColor="@color/gray"
+                             android:textSize="11sp" />
+                     </LinearLayout>
+                 </RelativeLayout>
+         </RelativeLayout>
+        
+
+        <ScrollView
+             android:layout_below="@+id/sty_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     >
+    <TextView
+        android:id="@+id/tv_recent_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="最近留言"
+        android:padding="10dp"
+        android:alpha="0.6"
+        android:textColor="@color/green"
+        android:textSize="14sp" />
+
+    <com.boil.hospitalorder.utils.MyListView
+        android:id="@+id/lv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@color/listview_divider"
+        android:dividerHeight="0.5dp"/>
+    
+        <TextView
+        android:id="@+id/tv_recent_consult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="最近咨询"
+        android:padding="10dp"
+        android:alpha="0.6"
+        android:visibility="gone"
+         android:textColor="@color/green"
+        android:textSize="14sp" />
+
+    <com.boil.hospitalorder.utils.MyListView
+        android:id="@+id/lv_consult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:divider="@color/listview_divider"
+        android:dividerHeight="0.5dp"/>
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

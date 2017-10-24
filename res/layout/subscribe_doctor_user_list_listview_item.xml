@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/announce_item_selector"
+    android:gravity="center_vertical"
+    android:padding="8dp" >
+
+    <com.boil.hospitalorder.utils.CLRoundImageView
+        android:id="@+id/head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:src="@drawable/head_default_yixin" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/head"
+        android:gravity="top"
+        android:singleLine="true"
+        android:text="姓名"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/user_name"
+        android:layout_toRightOf="@+id/head"
+        android:alpha="0.6"
+        android:gravity="bottom"
+        android:singleLine="true"
+        android:text="关注时间"
+        android:textSize="14sp" />
+
+</RelativeLayout>

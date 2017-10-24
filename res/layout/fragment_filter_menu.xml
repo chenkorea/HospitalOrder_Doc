@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ct="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divider_bg" >
+
+    <RelativeLayout
+        android:id="@+id/layout_category_topbar"
+        style="@style/TopbarStyle" >
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/item_margin"
+            android:textSize="@dimen/titleFontSize"
+            android:textColor="@color/black"
+            android:text="@string/fa_back" />
+
+        <TextView
+            android:id="@+id/tv_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="我的选择"
+            android:textSize="18sp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/item_margin"
+            android:textSize="@dimen/font_size_large"
+            android:text="@string/fa_default2" />
+    </RelativeLayout>
+    
+     <TextView 
+         android:id="@+id/tv_sure"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:padding="10dp"
+		        android:background="@drawable/bbuton_success"
+		        android:layout_alignParentBottom="true"
+		        android:text="确定"
+		        android:layout_gravity="bottom"
+		        android:textSize="18sp"
+		        android:gravity="center"
+		        android:textColor="@color/white"
+		        />
+
+    <ScrollView
+        android:id="@+id/scrollView_mine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_category_topbar" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin_top"
+            android:paddingBottom="@dimen/item_margin_top"
+            android:background="#fefefe"
+            android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_start_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_item_top2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_begin_datestr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/item_margin"
+                        android:layout_centerVertical="true"
+                        android:text="开始日期"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_begin_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toLeftOf="@+id/img_destination"
+                        android:layout_toRightOf="@+id/tv_begin_datestr"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:singleLine="true"
+                        android:text="2017-02-01"
+                        android:textColor="@color/black"
+                        android:alpha="0.8"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_global_arrow_right" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height_middle"
+                    android:layout_marginLeft="@dimen/item_margin"
+                    android:background="@color/listview_divider_bg" />
+                <RelativeLayout
+                    android:id="@+id/layout_end_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_item_bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_end_datestr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/item_margin"
+                        android:layout_centerVertical="true"
+                        android:text="结束日期"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_medium_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toLeftOf="@+id/img_destination1"
+                        android:layout_toRightOf="@+id/tv_end_datestr"
+                        android:layout_centerVertical="true"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:singleLine="true"
+                        android:text="2017-02-01"
+                        android:textColor="@color/black"
+                        android:alpha="0.8"
+                         />
+
+                    <ImageView
+                        android:id="@+id/img_destination1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_global_arrow_right" />
+                </RelativeLayout>
+                
+                 <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/small_medium_text_size"
+                    android:background="@color/listview_divider_bg" />
+                 
+             
+           	<LinearLayout
+	            android:id="@+id/LinearLayout2"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="15dp"
+	            android:padding="15dp"
+	            android:paddingBottom="10dp"
+	            android:orientation="horizontal" >
+                     
+           	   		 <TextView
+           	   		     android:id="@+id/im_dep_type"
+	                     android:layout_width="wrap_content"
+		          		 android:layout_height="wrap_content"
+		          		 android:text="@string/fa_circle"
+		          		 android:textSize="@dimen/activity_card_charge_tv"
+		          		 android:textColor="@color/bg_text_green"
+                        />
+                    <TextView
+	                     android:layout_width="wrap_content"
+		          		 android:layout_height="match_parent"
+		          		 android:layout_marginLeft="5dp"
+		          		 android:text="查询科室"
+                        />
+                 </LinearLayout>
+           	
+		    <com.boil.hospitalorder.hospitaldoctor.main.homepage.tagtools.TagFlowLayout
+		        android:id="@+id/id_flowlayout"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="20dp"
+		        ct:max_select="1"
+		        >
+		    </com.boil.hospitalorder.hospitaldoctor.main.homepage.tagtools.TagFlowLayout>
+		    
+		     <LinearLayout
+	            android:id="@+id/LinearLayout3"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="15dp"
+	            android:padding="15dp"
+	            android:paddingBottom="10dp"
+	            android:orientation="horizontal" >
+                     
+           	   		 <TextView
+           	   		     android:id="@+id/im_dignose_type"
+	                     android:layout_width="wrap_content"
+		          		 android:layout_height="wrap_content"
+		          		 android:text="@string/fa_circle"
+		          		 android:textSize="@dimen/activity_card_charge_tv"
+		          		 android:textColor="@color/bg_text_blue"
+                        />
+                    <TextView
+	                     android:layout_width="wrap_content"
+		          		 android:layout_height="match_parent"
+		          		 android:layout_marginLeft="5dp"
+		          		 android:text="查询类型"
+                        />
+                 </LinearLayout>
+           	
+		    <com.boil.hospitalorder.hospitaldoctor.main.homepage.tagtools.TagFlowLayout
+		        android:id="@+id/id_flowlayout2"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="20dp"
+		        ct:max_select="1"
+		        >
+		    </com.boil.hospitalorder.hospitaldoctor.main.homepage.tagtools.TagFlowLayout>
+            
+			<LinearLayout
+	            android:id="@+id/LinearLayout5"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:paddingLeft="15dp"
+	            android:padding="15dp"
+	            android:paddingBottom="30dp"
+	            android:orientation="horizontal" >
+                     
+           	   		 <TextView
+           	   		     android:id="@+id/im_date_type"
+	                     android:layout_width="wrap_content"
+		          		 android:layout_height="wrap_content"
+		          		 android:text="@string/fa_circle"
+		          		 android:textSize="@dimen/activity_card_charge_tv"
+		          		 android:textColor="@color/bg_text_gray"
+                        />
+                    <TextView
+	                     android:layout_width="wrap_content"
+		          		 android:layout_height="match_parent"
+		          		 android:layout_marginLeft="5dp"
+		          		 android:text="日期类型"
+                        />
+                 </LinearLayout>
+           	
+		    <com.boil.hospitalorder.hospitaldoctor.main.homepage.tagtools.TagFlowLayout
+		        android:id="@+id/id_flowlayout3"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="20dp"
+		        ct:max_select="1"
+		        >
+		    </com.boil.hospitalorder.hospitaldoctor.main.homepage.tagtools.TagFlowLayout>
+		  
+		    
+        </LinearLayout>
+        
+        
+    </ScrollView>
+
+     
+</RelativeLayout>

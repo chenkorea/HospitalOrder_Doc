@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pull="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divider_bg" >
+
+    <RelativeLayout
+        android:id="@+id/rel_head"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/head_bg" />
+
+    <include layout="@layout/loading_view_952658" />
+
+    <RelativeLayout
+        android:id="@+id/r_lay1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@string/cont_descr"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_sure_img" />
+
+        <TextView
+            android:id="@+id/tv_follow"
+            android:background="@drawable/bg_follow"
+			android:paddingTop="3dp"
+			android:paddingBottom="3dp"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:text="关注"
+            android:textSize="13sp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r_lay2"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@id/r_lay1"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp" >
+
+        <com.boil.utils.CLRoundImageView
+            android:id="@+id/iv_header"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/head_default_yixin" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/iv_header" >
+
+            <TextView
+                android:id="@+id/tv_doctor_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_doctor_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tv_doctor_name"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_doctor_name"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_hospital1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_doctor_name"
+                android:layout_marginTop="5dp"
+                android:text="贵州省肿瘤医院"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel_head"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/rel_title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:padding="8dp"
+                    android:text="预约挂号"
+                    android:textColor="@color/green"
+                    android:textSize="14sp" />
+
+                <include
+                    android:id="@+id/warning_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/check_one_table_tilte_1" />
+
+                <TextView
+                    android:id="@+id/tv_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:padding="8dp"
+                    android:text="医生简介"
+                    android:textColor="@color/green"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_title1"
+                android:paddingBottom="20dp" >
+
+                <RelativeLayout
+                    android:id="@+id/r_lay_hospital"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@color/white"
+                    android:paddingLeft="15dp" >
+
+                    <ImageView
+                        android:id="@+id/hospital_logo"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/cont_descr"
+                        android:src="@drawable/bianping08" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/hospital_logo"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_hospital"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="贵州省肿瘤医院"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_dept"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.8"
+                            android:singleLine="true"
+                            android:text="暂无科室"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r_lay_vote"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/r_lay_hospital"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/vote_logo"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/cont_descr"
+                        android:src="@drawable/bianping09" />
+
+                    <TextView
+                        android:id="@+id/tv_vote_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/vote_logo"
+                        android:singleLine="true"
+                        android:text="患者投票"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_vote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/cont_descr"
+                        android:src="@drawable/app_recommend_arrow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r_lay_good"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/r_lay_vote"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white" >
+
+                    <LinearLayout
+                        android:id="@+id/l_lay_good"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp" >
+
+                        <ImageView
+                            android:id="@+id/good_logo"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:contentDescription="@string/cont_descr"
+                            android:src="@drawable/bianping01" />
+
+                        <TextView
+                            android:id="@+id/tv_good_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:singleLine="true"
+                            android:text="擅长"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/tv_good_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/l_lay_good"
+                        android:background="@color/listview_divider"
+                        android:contentDescription="@string/cont_descr" />
+
+                    <TextView
+                        android:id="@+id/tv_good"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_good_line"
+                        android:alpha="0.8"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="65dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp"
+                        android:text="暂无医生擅长信息"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/r_lay_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/r_lay_good"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/white" >
+
+                    <LinearLayout
+                        android:id="@+id/l_lay_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp" >
+
+                        <ImageView
+                            android:id="@+id/intro_logo"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:contentDescription="@string/cont_descr"
+                            android:src="@drawable/bianping02" />
+
+                        <TextView
+                            android:id="@+id/tv_intro_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:singleLine="true"
+                            android:text="简介"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/tv_intro_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/l_lay_intro"
+                        android:background="@color/listview_divider"
+                        android:contentDescription="@string/cont_descr" />
+
+                    <TextView
+                        android:id="@+id/tv_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_intro_line"
+                        android:alpha="0.8"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="65dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="10dp"
+                        android:text="暂无医生简介信息"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_bg"
+    android:orientation="horizontal" >
+
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/normal_title_ct" />
+
+    <include
+        layout="@layout/loading_view_952658"
+        android:visibility="gone" />
+    
+   
+	
+    
+    <FrameLayout
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:divider="@color/hintColor"
+            android:dividerHeight="0.5dp"
+            android:childDivider="@color/hintColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ExpandableListView>
+
+        <FrameLayout
+            android:id="@+id/topGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </FrameLayout>
+    </FrameLayout>
+    
+    <View 
+	    android:id="@+id/v_order_trans"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:visibility="gone"
+	    android:background="#50000000"
+	    />
+
+</RelativeLayout>

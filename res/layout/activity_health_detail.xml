@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divider_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/normal_title_view" />
+
+    <include layout="@layout/loading_view_952658" />
+
+    <ScrollView
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:padding="8dp"
+                android:text="体检人"
+                android:textColor="@color/theme_color_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_test_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.8"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_ages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.8"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.8"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:alpha="0.8"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:padding="8dp"
+                android:text="体检结论"
+                android:textColor="@color/theme_color_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp" >
+
+                <!-- 
+                <com.boil.profile.view.MyListView2
+                    android:id="@+id/list_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#fff"
+                    android:visibility="gone"
+                    android:dividerHeight="2dp"
+                    android:listSelector="@android:color/transparent" >
+                </com.boil.profile.view.MyListView2>    --> 
+
+                
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:text="暂无体检结论"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:padding="8dp"
+                android:text="健康建议"
+                android:textColor="@color/theme_color_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp" >
+
+                <!--
+                <com.boil.profile.view.MyListView2
+                    android:id="@+id/list_suggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#fff"
+                    android:visibility="gone"
+                    android:dividerHeight="2dp"
+                    android:listSelector="@android:color/transparent" >
+                </com.boil.profile.view.MyListView2>-->                
+
+                <TextView
+                    android:id="@+id/tv_suggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_tips1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:text="暂无健康建议"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:padding="8dp"
+                android:text="检查项目"
+                android:textColor="@color/theme_color_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp" >
+
+                <com.boil.hospitalorder.utils.MyListView
+                    android:id="@+id/list_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/listview_divider"
+                    android:dividerHeight="0.6dp"
+                    android:listSelector="@android:color/transparent"
+                    android:visibility="gone" >
+                </com.boil.hospitalorder.utils.MyListView>
+
+                <!--
+                 <TextView
+                    android:id="@+id/tv_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>                -->
+                <TextView
+                    android:id="@+id/tv_tips2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:text="暂无检查项目"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

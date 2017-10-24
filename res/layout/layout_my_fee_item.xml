@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/announce_item_selector"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/tv_fee_hos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="贵州省肿瘤医院"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_fee_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_fee_hos"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/tv_fee_hos"
+        android:alpha="0.8"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fee_hos"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tv_fee_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fee_hos"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tv_no" />
+
+    <TextView
+        android:id="@+id/tv_fee_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_fee_hos"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

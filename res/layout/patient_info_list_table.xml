@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/C_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:orientation="horizontal" >
+        
+        
+
+
+        <com.boil.hospitalorder.utils.CHScrollView
+            android:id="@+id/ch_table_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                  <TextView
+                    android:id="@+id/tv_table_bedno"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/bg_table"
+                    android:text="床号"/>
+                
+                <TextView
+                    android:id="@+id/tv_table_name"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/bg_table"
+                    android:text="姓名"/>
+
+                
+                <TextView
+                    android:id="@+id/tv_table_admno"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_table"
+                    android:gravity="center"
+                    android:text="住院号" />
+                
+                
+                 <TextView
+                    android:id="@+id/tv_table_date"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_table"
+                    android:gravity="center"
+                    android:text="就诊日期" />
+                 
+                
+                 <TextView
+                    android:id="@+id/tv_table_register"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_table"
+                    android:gravity="center"
+                    android:text="登记号"/>
+                 
+                 <TextView
+                    android:id="@+id/tv_table_age"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_table"
+                    android:gravity="center"
+                    android:text="年龄"/>
+                 
+                 <TextView
+                    android:id="@+id/tv_table_sex"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_table"
+                    android:gravity="center"
+                    android:text="性别"/>
+
+                <TextView
+                    android:id="@+id/tv_table_hos_state"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_table"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:text="是否出院" />
+                
+                 <TextView
+                    android:id="@+id/tv_table_my_patient"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_table"
+                    android:gravity="center"
+                    android:text="病人医生" />
+                 
+            </LinearLayout>
+        </com.boil.hospitalorder.utils.CHScrollView>
+    </LinearLayout>
+
+ 
+    <ListView
+        android:id="@+id/lv_table_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+</LinearLayout>

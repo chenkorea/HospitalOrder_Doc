@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_choose"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/listview_divide_big"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tag_listview_bg"
+        android:cacheColorHint="@null"
+        android:listSelector="#00000000"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/im_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/fa_operat"
+                android:textColor="@color/orange"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/im_icon"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.8"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_dignose_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:alpha="0.6"
+                        android:textColor="@color/black"
+                         />
+                </LinearLayout>
+                
+                   <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_bed_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.6"
+                        android:textColor="@color/black"
+                        />
+                    
+                    <TextView
+			            android:id="@+id/tv_medi_type"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:background="@drawable/checked_green_bg_small"
+			            android:gravity="center"
+			            android:singleLine="true"
+			            android:textColor="@color/white"
+			            android:text="贵州省异地医保"
+			            android:layout_marginLeft="10dp"
+			            android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            
+            	<ImageView
+                android:id="@+id/im_icon_right"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/right_ct"
+            />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="1dp"
+            android:background="@color/listview_divide_big" />
+
+       
+        
+         <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_prtdiagnosis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:text="术前诊断："
+             	 />
+
+            <TextView
+                android:id="@+id/tv_prtdiagnosis_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_prtdiagnosis"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+               	 />
+        </RelativeLayout>
+        
+         <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_opersta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:text="手术状态："
+             	 />
+
+            <TextView
+                android:id="@+id/tv_opersta_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_opersta"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+               	 />
+        </RelativeLayout>
+        
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_booldtype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:text="血型："
+                />
+
+            <TextView
+                android:id="@+id/tv_booldtype_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+               	android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_booldtype"
+	            android:alpha="0.6"
+                android:textColor="@color/black"
+                />
+        </RelativeLayout>
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_opername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:text="手术名称："
+               />
+
+            <TextView
+                android:id="@+id/tv_opername_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_opername"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                />
+        </RelativeLayout>
+        
+           <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_operdoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:text="手术医生："
+                />
+
+            <TextView
+                android:id="@+id/tv_operdoc_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_operdoc"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                 />
+        </RelativeLayout>
+        
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_operroom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:text="手术间："
+             />
+
+            <TextView
+                android:id="@+id/tv_operroom_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_operroom"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                />
+        </RelativeLayout>
+        
+             <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_operpositon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:text="手术体位："
+               />
+
+            <TextView
+                android:id="@+id/tv_operpositon_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_operpositon"
+            	/>
+        </RelativeLayout>
+        
+             
+              <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_opertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:text="手术时间："
+            />
+
+            <TextView
+                android:id="@+id/tv_opertime_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+          		android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_opertime"
+                />
+        </RelativeLayout>
+        
+               <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_operappTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:text="手术申请时间："
+                 />
+
+            <TextView
+                android:id="@+id/tv_operappTime_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"            
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_operappTime"
+                />
+        </RelativeLayout>
+        
+                <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_operstaTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:text="手术开始时间："
+                />
+
+            <TextView
+                android:id="@+id/tv_operstaTime_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"        
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_operstaTime"
+           />
+        </RelativeLayout>
+        
+                 <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_opertype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                android:text="手术类型："
+               />
+
+            <TextView
+                android:id="@+id/tv_opertype_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"       
+                android:alpha="0.6"
+                android:textColor="@color/black"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/tv_opertype"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
