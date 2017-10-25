@@ -38,7 +38,7 @@ public class WelcomActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welcome);
-		mViewPager = (ViewPager) findViewById(R.id.viewpager_welcome);
+		mViewPager = (ViewPager) findViewById(R.id.viewpager_welcome_view);
 		initView();
 	}
 	private void initView() {

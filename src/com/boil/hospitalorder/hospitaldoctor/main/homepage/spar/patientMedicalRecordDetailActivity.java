@@ -200,7 +200,8 @@ public class patientMedicalRecordDetailActivity extends BaseBackActivity{
 	
 	private void queryReportClassify(String did){
 		//http://localhost:8080/hsptapp/doctor/emr/lsemrtype/602.html?did=370&stype=1
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/emr/lsemrtype/602.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/emr/lsemrtype/602.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("did", did);
@@ -242,7 +243,8 @@ public class patientMedicalRecordDetailActivity extends BaseBackActivity{
 	private void remoteLogin(final boolean isShowt) {
 		
 		//http://localhost:8080/hsptapp/doctor/medlogin/initlogin/201.html?uname=20001&pwd=123456
-		String url = Constants.WEB_URL_4+"/hsptapp/doctor/medlogin/initlogin/201.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/doctor/medlogin/initlogin/201.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("uname", configSP.getString(Constants.LOGIN_INFO_ID, ""));

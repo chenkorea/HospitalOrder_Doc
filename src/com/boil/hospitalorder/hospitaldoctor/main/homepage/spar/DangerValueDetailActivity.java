@@ -249,7 +249,8 @@ public class DangerValueDetailActivity extends BaseFragmentActivity implements S
 
 	private void queryDangerValueList(final CategoryItemVo vo, final int loadType, boolean isShowOn){
 //		http://localhost:8080/hsptapp/doctor/creticallis/querycreticallis/701.html?dhid=79&stime=2017-02-01 00:00&etime=2017-03-01 00:00&pagecount=-1
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/creticallis/querycreticallis/701.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/creticallis/querycreticallis/701.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("dhid", vo.getDepTypeId());//"95"

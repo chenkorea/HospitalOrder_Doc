@@ -105,7 +105,8 @@ public class PatientRecorderActivity extends BaseBackActivity{
 	
 	private void queryPatientInfo(String admId){
 		//http://localhost:8080/hsptapp/doctor/lisres/lkpatadminfo/110.html?hid=2&admid=361801
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/lisres/lkpatadminfo/110.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/lisres/lkpatadminfo/110.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		

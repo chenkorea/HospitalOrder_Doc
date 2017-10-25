@@ -71,6 +71,30 @@
                 android:layout_marginLeft="33dp"
                 android:background="@color/listview_divider" />
             <EditText
+                android:id="@+id/edit_hos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/login_dept"
+                android:drawablePadding="5dp"
+                android:hint="请选择医院"
+                 android:editable="false"
+                android:clickable="true"
+                android:focusable="false"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="33dp"
+                android:background="@color/listview_divider" />
+            
+            <EditText
                 android:id="@+id/edit_depart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

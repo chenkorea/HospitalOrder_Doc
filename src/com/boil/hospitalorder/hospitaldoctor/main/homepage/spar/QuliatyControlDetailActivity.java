@@ -120,7 +120,8 @@ public class QuliatyControlDetailActivity extends BaseBackActivity{
 	}
 	private void queryQulityCtrList(String deptId){
 //		http://58.42.232.110:8086/hsptapp/doctor/emr/lsdeptquality/606.html?deptId=79
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/emr/lsdeptquality/606.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/emr/lsdeptquality/606.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("deptId", deptId);

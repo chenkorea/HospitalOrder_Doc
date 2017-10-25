@@ -1,7 +1,9 @@
 package com.boil.hospitalorder.hospitaldoctor.userlogin.login.spar;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
@@ -34,6 +36,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.beardedhen.androidbootstrap.BootstrapButton;
@@ -116,6 +119,9 @@ public class LoginActivity extends BaseBackActivity {
 	private CheckBox box;
 	@ViewInject(R.id.edit_depart)
 	private EditText et_dept;
+	@ViewInject(R.id.edit_hos)
+	private EditText edit_hos;
+	
 	/** 登录用户名 */
 	private String loginUsername;
 	/** 登录密码 */
@@ -127,8 +133,13 @@ public class LoginActivity extends BaseBackActivity {
 	
 	private LoginDeptVo deptVo;
 	
+	private List<HospitalLoginVo> vos = new ArrayList<HospitalLoginVo>();
+	
 	/** 选择民族的对话框 */
 	private AlertDialog chooseNationDialog;
+	
+	/** 选择医院的对话框 */
+	private AlertDialog chooseHosDialog;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -137,7 +148,7 @@ public class LoginActivity extends BaseBackActivity {
 
 		// 开启注解
 		ViewUtils.inject(context);
-
+		getHospitalLogin();
 		initView();
 		initEvent();
 	}
@@ -299,6 +310,14 @@ public class LoginActivity extends BaseBackActivity {
 				overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 			}
 		});
+		
+		edit_hos.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				getHospitalLogin();
+			}
+		});
 	}
 
 	/**
@@ -309,7 +328,8 @@ public class LoginActivity extends BaseBackActivity {
 	private void remoteLogin() {
 		
 		//http://localhost:8080/hsptapp/doctor/medlogin/initlogin/201.html?uname=20001&pwd=123456
-		String url = Constants.WEB_URL_4+"/hsptapp/doctor/medlogin/initlogin/201.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/doctor/medlogin/initlogin/201.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("uname", loginUsername);
@@ -367,6 +387,54 @@ public class LoginActivity extends BaseBackActivity {
 		
 	}
 	
+	private void getHospitalLogin() {
+		
+		//http://58.42.232.110:8086/hsptapp/appconfig/hospitalports/8004.html
+		String url = Constants.WEB_URL_4+"/hsptapp/appconfig/hospitalports/8004.html";
+		// 请求参数
+		Map<String, String> params = new HashMap<String, String>();
+		params.put("type", "2");
+
+		volleyClient.sendJsonObjectRequest(Request.Method.GET, url, null, params, true, null,
+				new VolleyListener<JSONObject>() {
+
+					@Override
+					public void success(JSONObject response) {
+
+						try {
+							String resultCode = response.getString("resultCode");
+							
+
+							if ("1".equals(resultCode)) {
+								
+								String result=response.getString("t");
+								vos = JSON.parseArray(result, HospitalLoginVo.class);
+								if (vos != null && vos.size() > 0) {
+									
+									showChooseHosDialog();
+								}
+								
+							}else {
+								Utils.showToastBGNew(context, "用户名或密码错误");
+							}
+						} catch (JSONException e) {
+
+							e.printStackTrace();
+							Utils.showToastBGNew(context, "查询科室数据失败");
+						}
+
+					}
+
+					@Override
+					public void error(VolleyError error) {
+
+						Utils.showToastBGNew(context, "查询医院数据失败");
+					}
+				});
+		
+		
+	}
+	
 	/**
 	 * 
 	 * 显示选择名族的对话框。
@@ -404,6 +472,48 @@ public class LoginActivity extends BaseBackActivity {
 			}
 		} else {
 			chooseNationDialog.show();
+		}
+	}
+	
+	/**
+	 * 显示选择医院
+	 */
+	private void showChooseHosDialog() {
+		if (chooseHosDialog == null) {
+			// 显示民族列表的对话框
+			chooseHosDialog = new AlertDialog.Builder(context).create();
+			chooseHosDialog.show();
+			
+			Window window = chooseHosDialog.getWindow();
+			window.setContentView(R.layout.nation_list_view);
+			TextView dTitle = (TextView) window.findViewById(R.id.tv_title);
+			ListView dListView = (ListView) window.findViewById(R.id.lv_nation);
+			
+			dTitle.setText("请选择医院");
+			
+			dListView.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+					
+					HospitalLoginVo hospitalLoginVo = vos.get(position);
+					//显示选择的科室
+					edit_hos.setText(hospitalLoginVo.getName());
+					
+					Editor editor=configSP.edit();
+					editor.putString(Constants.HOSPITAL_LOGIN_ADD, hospitalLoginVo.getPort_url());
+					editor.putString(Constants.LOGIN_INFO_HID, hospitalLoginVo.getHos_id());
+					editor.putString(Constants.LOGIN_INFO_HOS_NAME, hospitalLoginVo.getName());
+					editor.commit();
+					// 关闭对话框
+					chooseHosDialog.dismiss();
+				}
+			});
+			
+			if (dListView.getAdapter() == null) {
+				dListView.setAdapter(new HosAdapter());
+			}
+		} else {
+			chooseHosDialog.show();
 		}
 	}
 	
@@ -449,7 +559,8 @@ public class LoginActivity extends BaseBackActivity {
 	private void queryUserInfo() {
 		
 		//http://localhost:8080/hsptapp/doctor/medlogin/verifylogin/202.html?uname=20001&pwd=123456&did=79&type=E
-		String url = Constants.WEB_URL_4+"/hsptapp/doctor/medlogin/verifylogin/202.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/doctor/medlogin/verifylogin/202.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("uname", loginUsername);
@@ -594,6 +705,36 @@ public class LoginActivity extends BaseBackActivity {
 			
 			TextView tvNation = ViewHolder.get(convertView, R.id.tv_nation);
 			tvNation.setText(infoVo.getDepts().get(position).getName());
+			
+			return convertView;
+		}
+	}
+	
+	private class HosAdapter extends BaseAdapter {
+		@Override
+		public int getCount() {
+			return vos.size();
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return vos.get(position);
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return position;
+		}
+
+		@SuppressLint("InflateParams")
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			if (convertView == null) {
+				convertView = inflater.inflate(R.layout.nation_list_view_item, null);
+			}
+			
+			TextView tvNation = ViewHolder.get(convertView, R.id.tv_nation);
+			tvNation.setText(vos.get(position).getName());
 			
 			return convertView;
 		}

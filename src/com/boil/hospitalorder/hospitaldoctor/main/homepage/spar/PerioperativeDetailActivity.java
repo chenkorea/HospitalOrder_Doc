@@ -70,7 +70,8 @@ public class PerioperativeDetailActivity extends BaseBackActivity{
 	
 	private void queryDetail(final String admno, String ocode){
 //		http://58.42.232.110:8086/hsptapp/doctor/operation/lsoeorditem/802.html?admno=397239&ocode=56.0%20003
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/operation/lsoeorditem/802.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/operation/lsoeorditem/802.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("admno", admno);

@@ -127,6 +127,8 @@ public interface Constants {
 	/**登录医生科室列表json*/
 	public static final String LOGIN_INFO_DEPT_JSON="login_info_dept_json";
 	
+	public static final String HOSPITAL_LOGIN_ADD="hos_login_address";
+	
 	/*------------------------------[登录信息]------------------------------*/
 	/*------------------------------[用户信息]------------------------------*/
 	/**用户id*/

@@ -205,7 +205,8 @@ public class PatientPerioperativeManagerActivity extends BaseFragmentActivity im
 
 	private void queryPerioperativeList(final CategoryItemVo vo){
 //		http://localhost:8080/hsptapp/doctor/operation/lspatoperlist/801.html?dhid=95&ocode=0
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/operation/lspatoperlist/801.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/operation/lspatoperlist/801.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("dhid", vo.getDepTypeId());//"95"

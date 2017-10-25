@@ -115,7 +115,8 @@ public class MessageChannelActivity extends BaseBackActivity implements OnItemCl
 	 * 
 	 */
 	private void queryAllSubList(final String uid) {
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/leavemsg/lslmtype/502.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/leavemsg/lslmtype/502.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("mid", uid);
@@ -235,7 +236,8 @@ public class MessageChannelActivity extends BaseBackActivity implements OnItemCl
 	 * 添加订阅接口
 	 */
 	private void addSubItem(final ChannelItem channel, final View view, final int position) {
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/leavemsg/addsubmsgtype/501.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/leavemsg/addsubmsgtype/501.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("mid", configSP.getString(Constants.USER_ID, ""));
@@ -306,7 +308,8 @@ public class MessageChannelActivity extends BaseBackActivity implements OnItemCl
 	 * 删除订阅接口
 	 */
 	private void removeSubItem(final ChannelItem channel, final View view, final int position) {
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/leavemsg/cancelsublmt/508.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/leavemsg/cancelsublmt/508.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("mid", configSP.getString(Constants.USER_ID, ""));

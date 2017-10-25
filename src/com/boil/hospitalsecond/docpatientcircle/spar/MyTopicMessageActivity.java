@@ -147,7 +147,8 @@ public class MyTopicMessageActivity extends BaseBackActivity implements CTPullUp
 	 */
 	private void queryMyTopicList(final int loadType){
 		//http://localhost:8080/hsptapp/leavemsg/lsselflmc/B003.html?uid=5
-		String url = Constants.WEB_URL_4 + "/hsptapp/leavemsg/lsselflmc/B003.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/leavemsg/lsselflmc/B003.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("uid", configSP.getString(Constants.USER_ID, ""));
@@ -231,7 +232,8 @@ public class MyTopicMessageActivity extends BaseBackActivity implements CTPullUp
 	
 	private void deleteMyTopic(final int position){
 		//http://localhost:8080/hsptapp/leavemsg/rmvselflmc/B004.html?uid=5&lmcId=
-		String url = Constants.WEB_URL_4 + "/hsptapp/leavemsg/rmvselflmc/B004.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/leavemsg/rmvselflmc/B004.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("uid", configSP.getString(Constants.USER_ID, ""));

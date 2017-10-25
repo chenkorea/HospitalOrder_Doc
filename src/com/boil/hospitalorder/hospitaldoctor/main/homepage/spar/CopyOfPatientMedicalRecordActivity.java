@@ -244,7 +244,8 @@ OnScrollListener{
 	
 	private void queryReportClassify(final LoginDeptVo depVo){
 //		http://58.42.232.110:8086/hsptapp/doctor/emr/lsemrtype/602.html?did=370&stype=1&admno=390699
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/emr/lsemrtype/602.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/emr/lsemrtype/602.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("did", depVo.getHisId());

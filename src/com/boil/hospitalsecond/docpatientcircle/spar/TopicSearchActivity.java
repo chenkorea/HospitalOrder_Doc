@@ -182,7 +182,8 @@ public class TopicSearchActivity extends BaseBackActivity implements CTPullUpLis
 	 * query all of topics's list
 	 */
 	private void queryTopicTypeList(final int loadType, final String keyWord) {
-		String url = Constants.WEB_URL_4 + "/hsptapp/leavemsg/findlmc/B006.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/leavemsg/findlmc/B006.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("keyword", keyWord);

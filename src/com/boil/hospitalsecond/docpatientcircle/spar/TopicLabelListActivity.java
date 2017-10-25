@@ -189,7 +189,8 @@ public class TopicLabelListActivity extends BaseBackActivity implements CTPullUp
 	 * query one of topics's list
 	 */
 	private void queryTopicTypeList(final int loadType) {
-		String url = Constants.WEB_URL_4 + "/hsptapp/leavemsg/lsotherlmc/B005.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/leavemsg/lsotherlmc/B005.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 	

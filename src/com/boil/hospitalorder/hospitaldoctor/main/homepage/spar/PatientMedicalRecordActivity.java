@@ -94,7 +94,8 @@ public class PatientMedicalRecordActivity extends BaseBackActivity{
 	}
 	private void queryReportClassify(){
 		//http://localhost:8080/hsptapp/doctor/emr/lsemrsuptype/601.html?hid=2
-		String url = Constants.WEB_URL_4 + "/hsptapp/doctor/emr/lsemrsuptype/601.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp + "/hsptapp/doctor/emr/lsemrsuptype/601.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("hid", configSP.getString(Constants.LOGIN_INFO_HID, ""));
