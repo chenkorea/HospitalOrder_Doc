@@ -121,7 +121,7 @@ public class QuliatyControlDetailActivity extends BaseBackActivity{
 	private void queryQulityCtrList(String deptId){
 //		http://58.42.232.110:8086/hsptapp/doctor/emr/lsdeptquality/606.html?deptId=79
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/emr/lsdeptquality/606.html";
+		String url = hosIp + "/doctor/emr/lsdeptquality/606.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("deptId", deptId);
@@ -176,7 +176,8 @@ public class QuliatyControlDetailActivity extends BaseBackActivity{
 	private void queryDept(){
 		
 		//http://localhost:8080/hsptapp/doctor/medlogin/initlogin/201.html?uname=20001&pwd=123456
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/medlogin/initlogin/201.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/medlogin/initlogin/201.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("uname", configSP.getString(Constants.LOGIN_INFO_ID, ""));

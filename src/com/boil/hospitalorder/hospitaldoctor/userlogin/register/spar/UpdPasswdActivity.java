@@ -178,7 +178,8 @@ public class UpdPasswdActivity extends BaseBackActivity {
 	 */
 	private void changePwd() {
 		//localhost:8080/hsptapp/doctor/medlogin/updmedadmpwd/204.html?uname=20001&oldpwd=123456&newpwd=000000
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/medlogin/updmedadmpwd/204.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/medlogin/updmedadmpwd/204.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("newpwd", newPasswd);

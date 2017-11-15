@@ -389,7 +389,8 @@ public class ColligateServiceActivity extends BaseBackActivity{
 	 */
 	private void queryHosList() {
 
-		String url = "http://58.42.232.110:8086/hsptapp/hpin/listhspt/1001.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hpin/listhspt/1001.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("state", "1");

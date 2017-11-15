@@ -17,6 +17,7 @@ import com.boil.hospitalorder.hospitaldoctor.main.homepage.model.ExamineCsVo;
 import com.boil.hospitalorder.hospitaldoctor.main.homepage.model.ExamineListVo;
 import com.boil.hospitalorder.hospitaldoctor.main.homepage.model.ExamineXdVo;
 import com.boil.hospitalorder.hospitaldoctor.main.homepage.model.ExamineYxVo;
+import com.boil.hospitalorder.utils.Constants;
 import com.boil.hospitalorder.utils.Utils;
 import com.boil.hospitalorder.volley.http.VolleyClient.VolleyListener;
 import com.lidroid.xutils.ViewUtils;
@@ -94,7 +95,8 @@ public class ItemCheckDetailActivity extends BaseBackActivity {
 	 */
 	private void queryXdtRes(String tj_id) {
 
-		String url = "http://58.42.232.110:8086/hsptapp/ptin/lktjxdt/2009.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/ptin/lktjxdt/2009.html";
 
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
@@ -150,7 +152,8 @@ public class ItemCheckDetailActivity extends BaseBackActivity {
 	 */
 	private void queryCsRes(String tj_id) {
 
-		String url = "http://58.42.232.110:8086/hsptapp/ptin/lktjcs/200A.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/ptin/lktjcs/200A.html";
 
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
@@ -205,7 +208,8 @@ public class ItemCheckDetailActivity extends BaseBackActivity {
 
 	private void queryYxRes(String tj_id) {
 
-		String url = "http://58.42.232.110:8086/hsptapp/ptin/lktjyx/200B.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/ptin/lktjyx/200B.html";
 
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();

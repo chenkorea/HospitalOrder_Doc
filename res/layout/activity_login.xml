@@ -36,7 +36,6 @@
                 android:drawableLeft="@drawable/ic_phone"
                 android:drawablePadding="5dp"
                 android:hint="请输入账号"
-                android:inputType="number"
                 android:paddingBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"

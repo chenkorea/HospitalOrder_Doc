@@ -271,7 +271,7 @@ public class MessagePlatformDetailActivity extends BaseBackActivity implements C
 	 */
 	private void queryMessageBackList(final int loadType) {
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/leavemsg/lslmr/506.html";
+		String url = hosIp + "/doctor/leavemsg/lslmr/506.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("lmcId", topicVo.getId());
@@ -445,7 +445,7 @@ public class MessagePlatformDetailActivity extends BaseBackActivity implements C
 	 */
 	public void addAgree(String backId, final int position) {
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/leavemsg/pushpraiselmr/507.html";
+		String url = hosIp + "/doctor/leavemsg/pushpraiselmr/507.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("lmrId", backId);
@@ -510,7 +510,7 @@ public class MessagePlatformDetailActivity extends BaseBackActivity implements C
 		removelmrFlag = false;
 		
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/leavemsg/removelmr/509.html";
+		String url = hosIp + "/doctor/leavemsg/removelmr/509.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("lmrId", backId);
@@ -596,7 +596,7 @@ public class MessagePlatformDetailActivity extends BaseBackActivity implements C
 		replyMessageFlag = false;
 		
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/leavemsg/addlmr/505.html";
+		String url = hosIp + "/doctor/leavemsg/addlmr/505.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("mid", configSP.getString(Constants.USER_ID, ""));

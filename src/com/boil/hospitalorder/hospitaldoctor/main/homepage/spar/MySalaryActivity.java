@@ -197,7 +197,8 @@ public class MySalaryActivity extends BaseBackActivity implements OnDateSetListe
 	private void querySalary(String date) {
 
 		// http://58.42.232.110:8086/hsptapp/doctor/medinfo/lkwagesdetail/301.html?&idcard=522224199004024015&date=2016-06&name=%E6%97%BA%E6%B5%B7%E6%B4%8B
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/medinfo/lkwagesdetail/301.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/medinfo/lkwagesdetail/301.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("idcard", configSP.getString(Constants.USER_ID_NUMBER, ""));

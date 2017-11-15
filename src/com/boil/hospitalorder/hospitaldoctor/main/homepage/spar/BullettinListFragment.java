@@ -18,6 +18,7 @@ import com.boil.hospitalorder.hospitaldoctor.main.homepage.model.ChannelItem;
 import com.boil.hospitalorder.hospitaldoctor.main.homepage.model.DocCircleInformation;
 import com.boil.hospitalorder.utils.CTListView;
 import com.boil.hospitalorder.utils.CTListView.CTPullUpListViewCallBack;
+import com.boil.hospitalorder.utils.Constants;
 import com.boil.hospitalorder.utils.LoadingUtils;
 import com.boil.hospitalorder.utils.PtrClassicFrameLayout;
 import com.boil.hospitalorder.utils.PtrDefaultHandler;
@@ -116,7 +117,8 @@ public class BullettinListFragment extends BaseFragment implements
 	
 	private void querySubListDetail(final int loadType) {
 //		http://localhost:8080/hsptapp/doctor/notice/lsnotice/402.html?hid=2&tid=16
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/notice/lsnotice/402.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/notice/lsnotice/402.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("hid", "-1");

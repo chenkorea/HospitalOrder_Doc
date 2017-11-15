@@ -538,7 +538,8 @@ public class PatientInfoActivity extends BaseBackActivity {
 	private void queryPatientInfo(){
 		//0106
 		//http://localhost:8080/hsptapp/doctor/lisres/lspatadminfo/101.html?hid=2&did=79
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/lisres/lspatadminfo/101.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/lisres/lspatadminfo/101.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		

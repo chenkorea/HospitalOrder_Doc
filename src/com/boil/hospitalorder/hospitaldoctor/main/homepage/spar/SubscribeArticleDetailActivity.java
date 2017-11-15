@@ -4,6 +4,7 @@ import org.apache.commons.lang.StringUtils;
 
 import com.boil.hospitalorder.hospitaldoctor.R;
 import com.boil.hospitalorder.hospitaldoctor.base.BaseBackActivity;
+import com.boil.hospitalorder.utils.Constants;
 import com.boil.hospitalorder.utils.Utils;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
@@ -95,15 +96,19 @@ public class SubscribeArticleDetailActivity extends BaseBackActivity {
 			String admno = getIntent().getStringExtra("admno");
 			String mrId = getIntent().getStringExtra("mrId");
 			String urlStr = "";
+			String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+			
 			if(StringUtils.isNotBlank(mrId)) {
-				urlStr = "http://58.42.232.110:8086/hsptapp/doctor/emr/lkemrcontent/603.html?tid=" + tid + "&admno=" + admno + "&mrId=" + mrId;
+				urlStr = hosIp +"/doctor/emr/lkemrcontent/603.html?tid=" + tid + "&admno=" + admno + "&mrId=" + mrId;
 			} else {
-				urlStr = "http://58.42.232.110:8086/hsptapp/doctor/emr/lkemrcontent/603.html?tid=" + tid + "&admno=" + admno;
+				urlStr = hosIp +"/doctor/emr/lkemrcontent/603.html?tid=" + tid + "&admno=" + admno;
 			}
 			webView.loadUrl(urlStr);
 		} else {
 			String articleId = getIntent().getStringExtra("id");
-			webView.loadUrl("http://58.42.232.110:8086/hsptapp/doctor/notice/lknoticedetail/404.html?adtid=" + articleId);
+			String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+			
+			webView.loadUrl(hosIp +"/doctor/notice/lknoticedetail/404.html?adtid=" + articleId);
 		}
 	}
 	

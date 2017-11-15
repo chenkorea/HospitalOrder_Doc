@@ -101,7 +101,7 @@ public class DangerPatientValueDetailActivity extends BaseFragmentActivity{
 	private void queryDangerValueList(boolean isShowOn){
 //		http://localhost:8080/hsptapp/doctor/creticallis/lscreticallisbyadmno/702.html?admno=379703&stime=2017-01-01&etime=2017-03-09
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/creticallis/lscreticallisbyadmno/702.html";
+		String url = hosIp + "/doctor/creticallis/lscreticallisbyadmno/702.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("admno", admno);//"95"

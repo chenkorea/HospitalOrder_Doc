@@ -159,7 +159,7 @@ public class SubscribeDoctorUserListActivity extends BaseBackActivity implements
 	 */
 	private void querySubscribeList(final int loadType) {
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/leavemsg/lssubtousers/510.html";
+		String url = hosIp + "/doctor/leavemsg/lssubtousers/510.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("mid", configSP.getString(Constants.USER_ID, ""));

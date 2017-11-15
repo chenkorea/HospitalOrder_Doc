@@ -125,7 +125,7 @@ public class AdviceDetailActivity extends BaseBackActivity{
 		
 		//http://58.42.232.110:8086/hsptapp/doctor/lisres/lkpatorderdetail/109.html?hid=2&oid=354987||27
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp+"/hsptapp/doctor/lisres/lkpatorderdetail/109.html";
+		String url = hosIp+"/doctor/lisres/lkpatorderdetail/109.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("hid", configSP.getString(Constants.LOGIN_INFO_HID, ""));

@@ -150,7 +150,7 @@ public class PatientBaseInfoActivity extends BaseBackActivity{
 		
 		//http://localhost:8080/hsptapp/doctor/lisres/lkpatinfodetail/108.html?hid=2&admId=359201
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp+"/hsptapp/doctor/lisres/lkpatinfodetail/108.html";
+		String url = hosIp+"/doctor/lisres/lkpatinfodetail/108.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("hid", configSP.getString(Constants.LOGIN_INFO_HID, ""));

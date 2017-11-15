@@ -96,7 +96,7 @@ public class ReplyMessageActivity extends BaseBackActivity {
 
 	private void addMessage() {
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/leavemsg/addlmr/505.html";
+		String url = hosIp + "/doctor/leavemsg/addlmr/505.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("mid", configSP.getString(Constants.USER_ID, ""));

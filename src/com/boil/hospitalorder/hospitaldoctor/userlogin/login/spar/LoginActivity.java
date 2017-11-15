@@ -329,7 +329,7 @@ public class LoginActivity extends BaseBackActivity {
 		
 		//http://localhost:8080/hsptapp/doctor/medlogin/initlogin/201.html?uname=20001&pwd=123456
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp+"/hsptapp/doctor/medlogin/initlogin/201.html";
+		String url = hosIp+"/doctor/medlogin/initlogin/201.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("uname", loginUsername);
@@ -560,7 +560,7 @@ public class LoginActivity extends BaseBackActivity {
 		
 		//http://localhost:8080/hsptapp/doctor/medlogin/verifylogin/202.html?uname=20001&pwd=123456&did=79&type=E
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp+"/hsptapp/doctor/medlogin/verifylogin/202.html";
+		String url = hosIp+"/doctor/medlogin/verifylogin/202.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("uname", loginUsername);

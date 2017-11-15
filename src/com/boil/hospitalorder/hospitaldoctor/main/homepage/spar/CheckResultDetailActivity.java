@@ -119,7 +119,8 @@ public class CheckResultDetailActivity extends BaseBackActivity {
 	private void getResultDetail() {
 		
 		//http://localhost:8080/hsptapp/doctor/lisres/querypacsres/107.html
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/lisres/querypacsres/107.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/lisres/querypacsres/107.html";
 
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();

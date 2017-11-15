@@ -257,7 +257,8 @@ public class HealthDetailActivity extends BaseBackActivity {
 
 	private void queryExamList(final String tj_id) {
 		
-		String url = "http://58.42.232.110:8086/hsptapp/ptin/lktjjl/2008.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/ptin/lktjjl/2008.html";
 		
 
 		// 请求参数
@@ -318,7 +319,8 @@ public class HealthDetailActivity extends BaseBackActivity {
 	private void queryCheckItemList(final String tj_id){
 		
 		
-		String url = "http://58.42.232.110:8086/hsptapp/ptin/lktjlsres/200C.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/ptin/lktjlsres/200C.html";
 		
 
 		// 请求参数
@@ -373,7 +375,8 @@ public class HealthDetailActivity extends BaseBackActivity {
 	
 	private void queryCheckItemDetailList(String tj_id){
 		
-		String url = "http://58.42.232.110:8086/hsptapp/ptin/lktjlsrsd/200D.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/ptin/lktjlsrsd/200D.html";
 		
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();

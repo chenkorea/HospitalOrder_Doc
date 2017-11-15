@@ -34,6 +34,7 @@ import com.boil.hospitalorder.hospitaldoctor.base.BaseFragmentActivity;
 import com.boil.hospitalorder.hospitaldoctor.main.homepage.model.ChannelItem;
 import com.boil.hospitalorder.utils.BaseTools;
 import com.boil.hospitalorder.utils.ColumnHorizontalScrollView;
+import com.boil.hospitalorder.utils.Constants;
 import com.boil.hospitalorder.utils.LoadingUtils;
 import com.boil.hospitalorder.utils.Utils;
 import com.boil.hospitalorder.volley.http.VolleyClient.VolleyListener;
@@ -91,7 +92,8 @@ public class BulletinSecondActivity extends BaseFragmentActivity {
 	
 	private void querySubList(String flag) {
 //		http://localhost:8080/hsptapp/doctor/notice/lshsptnotice/401.html
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/notice/lshsptnotice/401.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/notice/lshsptnotice/401.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 //		params.put("uid", "-1");

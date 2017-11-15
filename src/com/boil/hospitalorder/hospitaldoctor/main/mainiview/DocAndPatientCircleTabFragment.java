@@ -154,7 +154,7 @@ public class DocAndPatientCircleTabFragment extends BaseFragment {
 		}
 		
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/leavemsg/lsalllmc/503.html";
+		String url = hosIp + "/doctor/leavemsg/lsalllmc/503.html";
 		
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
@@ -212,7 +212,7 @@ public class DocAndPatientCircleTabFragment extends BaseFragment {
 	 */
 	private void queryTopicType() {
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/leavemsg/lslmtype/502.html";
+		String url = hosIp + "/doctor/leavemsg/lslmtype/502.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("mid", configSP.getString(Constants.USER_ID, ""));

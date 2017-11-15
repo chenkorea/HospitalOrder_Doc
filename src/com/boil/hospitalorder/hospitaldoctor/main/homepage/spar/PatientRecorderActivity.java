@@ -106,7 +106,7 @@ public class PatientRecorderActivity extends BaseBackActivity{
 	private void queryPatientInfo(String admId){
 		//http://localhost:8080/hsptapp/doctor/lisres/lkpatadminfo/110.html?hid=2&admid=361801
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp + "/hsptapp/doctor/lisres/lkpatadminfo/110.html";
+		String url = hosIp + "/doctor/lisres/lkpatadminfo/110.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		
@@ -164,7 +164,8 @@ public class PatientRecorderActivity extends BaseBackActivity{
 	private void queryRecorder(){
 
 		// http://localhost:8080/hsptapp/doctor/lisres/lsadmbypapmi/104.html
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/lisres/lsadmbypapmi/104.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/lisres/lsadmbypapmi/104.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("hid", configSP.getString(Constants.LOGIN_INFO_HID, ""));

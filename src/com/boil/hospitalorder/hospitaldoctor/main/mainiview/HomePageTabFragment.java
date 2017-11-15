@@ -228,7 +228,8 @@ public class HomePageTabFragment extends BaseFragment {
 	}
 	private void isOpenInter() {
 		//http://localhost:8080/hsptapp/appconfig/serviceisusable.html
-		String url = "http://58.42.232.110:8086/hsptapp/appconfig/serviceisusable.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/hsptapp/appconfig/serviceisusable.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 	
@@ -267,7 +268,8 @@ public class HomePageTabFragment extends BaseFragment {
 	private void queryHomeNotice() {
 
 		// http://localhost:8080/hsptapp/doctor/notice/hsptnotice/403.html?hid=2
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/notice/hsptnotice/403.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/notice/hsptnotice/403.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("hid", configSP.getString(Constants.LOGIN_INFO_HID, ""));

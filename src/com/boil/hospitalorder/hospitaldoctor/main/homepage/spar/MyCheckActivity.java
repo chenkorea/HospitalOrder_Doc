@@ -109,7 +109,7 @@ public class MyCheckActivity extends BaseBackActivity{
 	
 	private void queryExamList() {
 		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
-		String url = hosIp+"/hsptapp/ptin/lstjres/2006.html";
+		String url = hosIp+"/ptin/lstjres/2006.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("hid", configSP.getString(Constants.LOGIN_INFO_HID, ""));

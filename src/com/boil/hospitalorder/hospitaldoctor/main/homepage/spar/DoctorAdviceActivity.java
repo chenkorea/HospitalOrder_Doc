@@ -501,7 +501,8 @@ public class DoctorAdviceActivity extends BaseBackActivity implements OnDateSetL
 	private void queryAdvice(){
 		
 		//http://localhost:8080/hsptapp/doctor/lisres/lspatorderitem/105.html?hid=2&admno=345544&sdate=2016-11-20&edate=2016-11-21&odept=79&otype=1&ostate=1&stype=1
-		String url = "http://58.42.232.110:8086/hsptapp/doctor/lisres/lspatorderitem/105.html";
+		String hosIp = configSP.getString(Constants.HOSPITAL_LOGIN_ADD, "");
+		String url = hosIp+"/doctor/lisres/lspatorderitem/105.html";
 		// 请求参数
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("hid", configSP.getString(Constants.LOGIN_INFO_HID, ""));
